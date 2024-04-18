@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-let logo = require("../Assets/logo.png");
+let logo = require("../../Assets/logo.png");
 
 function Header() {
   return (
@@ -15,9 +15,9 @@ function Header() {
             <img
               src={logo}
               alt="Logo"
-              width="30"
+              width="28"
               height="30"
-              className="d-inline-block align-text-top"
+              className="d-inline-block align-text-top me-1"
             />
             Музеї світу
           </NavLink>
