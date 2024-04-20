@@ -1,7 +1,15 @@
 import React from "react";
 import { Footer, Header } from "../Components";
 import { Route, Routes } from "react-router-dom";
-import { About, Contacts, Home, ImagesGallery, News, NotFound } from "../Pages";
+import {
+  About,
+  Contacts,
+  Home,
+  ImagesGallery,
+  Museums,
+  News,
+  NotFound,
+} from "../Pages";
 function App() {
   return (
     <div>
@@ -12,6 +20,7 @@ function App() {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/images" element={<ImagesGallery />} />
         <Route path="/news" element={<News />} />
+        <Route path="/museums" element={<Museums />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

@@ -4,5 +4,6 @@ import ImagesGallery from "./ImagesGallery";
 import News from "./News";
 import NotFound from "./NotFound";
 import Home from "./Home";
+import Museums from "./Museums";
 
-export { About, Contacts, ImagesGallery, News, NotFound, Home };
+export { About, Contacts, ImagesGallery, News, NotFound, Home, Museums };

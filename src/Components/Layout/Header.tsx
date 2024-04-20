@@ -34,12 +34,11 @@ function Header() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <NavLink
-                className="nav-link active"
-                aria-current="page"
-                to="/about"
-              >
+              <NavLink className="nav-link" to="/about">
                 Про сайт
+              </NavLink>
+              <NavLink className="nav-link" to="/museums">
+                Музеї
               </NavLink>
               <NavLink className="nav-link" to="/images">
                 Галерея картинок
