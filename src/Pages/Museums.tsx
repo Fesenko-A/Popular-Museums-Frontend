@@ -1,7 +1,11 @@
-import React from "react";
+import { MuseumList } from "../Components/Home";
 
 function Museums() {
-  return <div>Museums</div>;
+  return (
+    <div>
+      <MuseumList />
+    </div>
+  );
 }
 
 export default Museums;
