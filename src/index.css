@@ -26,3 +26,16 @@ a:link {
   -webkit-line-clamp: var(--max-lines);
   -webkit-box-orient: vertical;
 }
+
+.fading-in {
+  animation: fade-in 0.3s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
