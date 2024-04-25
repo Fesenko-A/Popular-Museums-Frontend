@@ -6,6 +6,7 @@ import {
   Contacts,
   Home,
   ImagesGallery,
+  MuseumDetails,
   Museums,
   News,
   NotFound,
@@ -21,6 +22,7 @@ function App() {
         <Route path="/images" element={<ImagesGallery />} />
         <Route path="/news" element={<News />} />
         <Route path="/museums" element={<Museums />} />
+        <Route path="/museumDetails/:museumId" element={<MuseumDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

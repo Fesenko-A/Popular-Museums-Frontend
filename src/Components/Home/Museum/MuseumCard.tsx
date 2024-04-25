@@ -15,7 +15,7 @@ function MuseumCard(props: Props) {
             <img
               src={props.museum.imageUrl}
               alt={`${props.museum.name} - картинка недоступна :(`}
-              className="img-fluid rounded-start"
+              className="img-fluid"
             />
           </Link>
         </div>

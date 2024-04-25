@@ -1,4 +1,4 @@
-import { MuseumList } from "../Components/Home";
+import { MuseumList } from "../../Components/Home";
 
 function Museums() {
   return (

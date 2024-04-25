@@ -6,7 +6,6 @@ import { Loader, MuseumCard } from "..";
 function MuseumList() {
   const [museums, setMuseums] = useState<Museum[]>([]);
   const { data, isLoading } = useGetAllMuseumsQuery(null);
-  const a = true;
 
   useEffect(() => {
     if (data) {

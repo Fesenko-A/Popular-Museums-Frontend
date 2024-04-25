@@ -4,6 +4,16 @@ import ImagesGallery from "./ImagesGallery";
 import News from "./News";
 import NotFound from "./NotFound";
 import Home from "./Home";
-import Museums from "./Museums";
+import Museums from "./Museum/Museums";
+import MuseumDetails from "./Museum/MuseumDetails";
 
-export { About, Contacts, ImagesGallery, News, NotFound, Home, Museums };
+export {
+  About,
+  Contacts,
+  ImagesGallery,
+  News,
+  NotFound,
+  Home,
+  Museums,
+  MuseumDetails,
+};
