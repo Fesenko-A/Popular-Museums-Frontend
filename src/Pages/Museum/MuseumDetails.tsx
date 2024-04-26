@@ -7,36 +7,55 @@ function MuseumDetails() {
   const { museumId } = useParams();
   const { data, isLoading } = useGetMuseumByIdQuery(museumId);
 
+  const numberWithCommas = (num: number) => {
+    let parts = num.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return parts.join(",");
+  };
+
   return (
     <>
       {isLoading && <Loader />}
       {!isLoading && (
-        <div>
-          <h5 className="text-center mt-2">{data?.result.name}</h5>
-          <img
-            src={data?.result.imageUrl}
-            alt={`${data?.result.name} - картинка недоступна :(`}
-            className="img-fluid rounded mx-auto"
-            style={{ height: "20rem" }}
-          />
-          <div className="m-3" style={{ fontSize: "1.15rem" }}>
-            <div>
-              Місто: {data?.result.city}
-              <img
-                alt={data?.result.country}
-                src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${data?.result.country}.svg`}
-                style={{
-                  height: "1rem",
-                  marginLeft: ".4rem",
-                  marginBottom: ".25rem",
-                }}
-              />
+        <div className="fading-in fs-5">
+          <div className="d-flex mt-3">
+            <img
+              src={data?.result.imageUrl}
+              alt={`${data?.result.name}`}
+              className="img-fluid img-thumbnail ms-auto"
+              style={{ height: "13rem" }}
+            />
+            <div className="me-auto ms-3 mt-auto mb-auto">
+              <h5>{data?.result.name}</h5>
+              <div>
+                Місто: {data?.result.city}
+                <img
+                  alt={data?.result.country}
+                  src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${data?.result.country}.svg`}
+                  style={{
+                    height: "1rem",
+                    marginLeft: ".4rem",
+                    marginBottom: ".25rem",
+                  }}
+                />
+              </div>
+              <div>
+                Вебсайт:&nbsp;
+                <a href={data?.result.websiteLink} target="blank">
+                  {data?.result.websiteLink}
+                </a>
+              </div>
+              <div>
+                К-сть відвідувачів на рік:&nbsp;
+                {numberWithCommas(data?.result.visitorsPerYear)}
+              </div>
+              <div>Засновано: {data?.result.foundationYear} рік</div>
             </div>
-            Вебсайт:{" "}
-            <a href={data?.result.websiteLink} target="blank">
-              {data?.result.websiteLink}
-            </a>
           </div>
+          <div className="m-4" style={{ textAlign: "justify" }}>
+            {data?.result.description}
+          </div>
+          <div className="text-center">Images block</div>
         </div>
       )}
     </>
