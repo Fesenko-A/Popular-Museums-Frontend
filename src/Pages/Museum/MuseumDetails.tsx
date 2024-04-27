@@ -1,10 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useGetMuseumByIdQuery } from "../../API/museumApi";
-import { Loader } from "../../Components/Home";
+import { ImageBlock, Loader } from "../../Components/Home";
+import { useGetImageByMuseumIdQuery } from "../../API/imageApi";
 
 function MuseumDetails() {
   const { museumId } = useParams();
+  const { data: imagesData, isLoading: imagesLoading } =
+    useGetImageByMuseumIdQuery(museumId);
   const { data, isLoading } = useGetMuseumByIdQuery(museumId);
 
   const numberWithCommas = (num: number) => {
@@ -55,7 +58,13 @@ function MuseumDetails() {
           <div className="m-4" style={{ textAlign: "justify" }}>
             {data?.result.description}
           </div>
-          <div className="text-center">Images block</div>
+          {imagesLoading && <Loader />}
+          {!imagesLoading && (
+            <div className="text-center">
+              Зображення
+              <ImageBlock images={imagesData?.result} />
+            </div>
+          )}
         </div>
       )}
     </>
