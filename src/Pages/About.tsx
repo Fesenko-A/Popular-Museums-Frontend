@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function About() {
   return (
-    <div style={{ margin: "1rem", fontSize: "1.2rem" }}>
+    <div style={{ margin: "1rem", fontSize: "1.2rem" }} className="fading-in">
       <h5 style={{ textAlign: "center" }}>
         Ласкаво просимо на сайт, який присвячений найвідомішим музеям світу!
       </h5>

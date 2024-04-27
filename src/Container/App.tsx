@@ -5,6 +5,7 @@ import {
   About,
   Contacts,
   Home,
+  ImageDetails,
   ImagesGallery,
   MuseumDetails,
   Museums,
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/images" element={<ImagesGallery />} />
+        <Route path="/image/:imageId" element={<ImageDetails />} />
         <Route path="/news" element={<News />} />
         <Route path="/museums" element={<Museums />} />
         <Route path="/museumDetails/:museumId" element={<MuseumDetails />} />
