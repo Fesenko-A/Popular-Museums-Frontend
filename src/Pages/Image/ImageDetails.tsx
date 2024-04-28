@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { useGetImageByIdQuery } from "../../API/imageApi";
-import { Loader } from "../../Components/Home";
+import { Loader } from "../../Components";
 
 function ImageDetails() {
   const { imageId } = useParams();

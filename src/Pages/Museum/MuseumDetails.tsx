@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useGetMuseumByIdQuery } from "../../API/museumApi";
-import { ImageBlock, Loader } from "../../Components/Home";
+import { ImageBlock, Loader } from "../../Components";
 import { useGetImageByMuseumIdQuery } from "../../API/imageApi";
 
 function MuseumDetails() {
@@ -20,8 +20,8 @@ function MuseumDetails() {
     <>
       {isLoading && <Loader />}
       {!isLoading && (
-        <div className="fading-in fs-5">
-          <div className="d-flex mt-3">
+        <div className="fading-in fs-5 container-fluid">
+          <div className="d-flex mt-3 ">
             <img
               src={data?.result.imageUrl}
               alt={`${data?.result.name}`}
@@ -45,7 +45,7 @@ function MuseumDetails() {
               <div>
                 Вебсайт:&nbsp;
                 <a href={data?.result.websiteLink} target="blank">
-                  {data?.result.websiteLink}
+                  клік
                 </a>
               </div>
               <div>

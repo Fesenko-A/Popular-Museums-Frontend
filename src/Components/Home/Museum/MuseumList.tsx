@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useGetAllMuseumsQuery } from "../../../API/museumApi";
 import { Museum } from "../../../Interfaces";
-import { Loader, MuseumCard } from "..";
+import { Loader, MuseumCard } from "../..";
 
 function MuseumList() {
   const [museums, setMuseums] = useState<Museum[]>([]);

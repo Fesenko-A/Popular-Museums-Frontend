@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Image } from "../../Interfaces";
 import { useGetAllImagesQuery } from "../../API/imageApi";
-import { ImageBlock, Loader } from "../../Components/Home";
+import { ImageBlock, Loader } from "../../Components";
 
 function ImagesGallery() {
   const [images, setImages] = useState<Image[]>([]);
