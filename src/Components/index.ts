@@ -6,6 +6,8 @@ import MuseumCard from "./Home/Museum/MuseumCard";
 import Loader from "./Common/Loader";
 import ImageBlock from "./Home/Image/ImageBlock";
 import NewsPost from "./Home/News/NewsPost";
+import MainNewsList from "./Home/News/MainNewsList";
+import MainNewsPost from "./Home/News/MainNewsPost";
 
 export {
   Header,
@@ -16,4 +18,6 @@ export {
   Loader,
   ImageBlock,
   NewsPost,
+  MainNewsList,
+  MainNewsPost,
 };

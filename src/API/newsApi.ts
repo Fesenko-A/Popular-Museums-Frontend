@@ -16,7 +16,7 @@ const newsApi = createApi({
     }),
     getNews: builder.query({
       query: (count) => ({
-        url: `news/getall/${count}`,
+        url: `news/get/${count}`,
       }),
       providesTags: ["News"],
     }),

@@ -1,10 +1,11 @@
 import React from "react";
-import { Slider } from "../Components";
+import { MainNewsList, Slider } from "../Components";
 
 function Home() {
   return (
-    <div>
+    <div className="fading-in">
       <Slider />
+      <MainNewsList />
     </div>
   );
 }
