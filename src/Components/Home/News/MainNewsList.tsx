@@ -13,7 +13,7 @@ function MainNewsList() {
         <div className="container">
           <div className="row" style={{ justifyContent: "center" }}>
             {data?.result.map((news: News, index: number) => (
-              <MainNewsPost news={news} />
+              <MainNewsPost news={news} key={index} />
             ))}
           </div>
         </div>
